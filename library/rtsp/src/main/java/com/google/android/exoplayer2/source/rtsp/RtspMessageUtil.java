@@ -86,7 +86,7 @@ import java.util.regex.Pattern;
   private static final Pattern REQUEST_LINE_PATTERN = Pattern.compile("([A-Z_]+) (.*) RTSP/1\\.0");
 
   // Status line pattern, see RFC2326 Section 7.1.
-  private static final Pattern STATUS_LINE_PATTERN = Pattern.compile("RTSP/1\\.0 (\\d+) (.+)");
+  private static final Pattern STATUS_LINE_PATTERN = Pattern.compile("RTSP/1\\.0 (\\d+)( (.+))?"); // allow 200 without OK
 
   // Content length header pattern, see RFC2326 Section 12.14.
   private static final Pattern CONTENT_LENGTH_HEADER_PATTERN =
